@@ -4,13 +4,13 @@ function calc (a:number, b:number): number  {
 
 let uploadStatus:  "загрузка" | "успех" | "ошибка"
 let textFormat: "прописная" | "строчная" | "заглавная"
-interface User {
+interface IUser {
     name:string
     age:number
     passportId ? : string
 }
 
- interface Employee extends User {
+ interface IEmployee extends IUser {
     position: string
     experience: number
  }
@@ -35,7 +35,7 @@ function removeChar (text:string, char:string) : string {
 }
 removeChar("банан", "а")
 
-const users: User[] = [
+const users: IUser[] = [
 {
     name: "Imam",
     age: 19,
